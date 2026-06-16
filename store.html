@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL-HAMZAWI STORE - الواجهة الرسمية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --dark-bg: #121212; /* أسود مطفي فخم خلفية */
+            --card-bg: #1e1e1e; /* أسود فاتح للكروت */
+            --gold-color: #d4af37; /* ذهبي ملوكي للبراند */
+            --pink-accent: #e21b79; /* بينك متوهج للمسات التيك */
+            --text-color: #f5f5f5;
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
+            50% { box-shadow: 0 0 25px rgba(212, 175, 55, 0.4); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--dark-bg);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            padding-bottom: 60px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #151515;
+            min-height: 100vh;
+            box-shadow: 0 0 50px rgba(0,0,0,0.8);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        /* كرت الهوية واللوجو الفخم */
+        .brand-header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+            border-radius: 24px;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            animation: glow 4s infinite ease-in-out, fadeInUp 0.8s ease forwards;
+            margin-bottom: 25px;
+        }
+        .brand-logo-view {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--gold-color);
+            margin: 0 auto 15px auto;
+            background: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--gold-color);
+            text-shadow: 0 0 10px rgba(212,175,55,0.5);
+        }
+        .brand-title {
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--gold-color);
+            margin: 0 0 8px 0;
+            letter-spacing: 1px;
+        }
+        .brand-tagline {
+            font-size: 14px;
+            color: #aaa;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* كروت السياسة والأقسام */
+        .animated-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 22px 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+        }
+        .card-1 { animation-delay: 0.2s; }
+        .card-2 { animation-delay: 0.4s; }
+
+        .section-title {
+            font-size: 17px;
+            font-weight: 800;
+            margin-bottom: 18px;
+            color: var(--gold-color);
+            border-right: 4px solid var(--pink-accent);
+            padding-right: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .policy-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .policy-item {
+            position: relative;
+            padding-right: 25px;
+            margin-bottom: 15px;
+            font-size: 13.5px;
+            line-height: 1.6;
+            color: #ccc;
+            font-weight: 600;
+        }
+        .policy-item::before {
+            content: "✦";
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: var(--gold-color);
+            font-weight: 900;
+        }
+        .policy-item strong {
+            color: #fff;
+            display: block;
+            margin-bottom: 2px;
+            font-size: 14px;
+        }
+
+        /* أزرار التوجيه والتحكم */
+        .action-buttons-wrapper {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            animation: fadeInUp 0.8s ease forwards;
+            animation-delay: 0.6s;
+            opacity: 0;
+        }
+        .btn-store-action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 15px;
+            border-radius: 50px;
+            font-family: 'Cairo', sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+            text-decoration: none;
+            box-sizing: border-box;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-primary-gold {
+            background: linear-gradient(90deg, #b89324, #d4af37);
+            color: #111;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.25);
+            border: none;
+        }
+        .btn-primary-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        }
+        .btn-whatsapp-dark {
+            background: #25d366;
+            color: #fff;
+            border: none;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.2);
+        }
+        .btn-whatsapp-dark:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+        }
+        .ws-btn-icon {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+
+        .store-footer {
+            text-align: center;
+            padding: 25px 10px;
+            font-size: 12px;
+            color: #666;
+            font-weight: 600;
+            line-height: 1.6;
+            border-top: 1px solid rgba(255,255,255,0.03);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- كرت هوية المتجر الملوكي -->
+        <div class="brand-header">
+            <div class="brand-logo-view">H</div> <!-- اختصار الحمزاوي، ويمكنك وضع اللوجو الذهبي كصورة لاحقاً -->
+            <h1 class="brand-title">AL-HAMZAWI STORE</h1>
+            <p class="brand-tagline">المنصة الرسمية المعتمدة للتجارة الإلكترونية والتسوق الآمن ⚡</p>
+        </div>
+
+        <!-- كرت سياسة الشحن والمعاينة والضمان -->
+        <div class="animated-card card-1">
+            <div class="section-title">⚖️ سياسة وشروط المتجر الرسمية</div>
+            <ul class="policy-list">
+                <li class="policy-item">
+                    <strong>المعاينة الكاملة قبل الدفع:</strong>
+                    نعطيك كامل الحق القانوني في فتح الشحنة وفحص جودة المنتج بالكامل مع مندوب التوصيل قبل دفع أي مبالغ مالية.
+                </li>
+                <li class="policy-item">
+                    <strong>شحن فوري سريع صاعق:</strong>
+                    يتم معالجة وتأكيد طلبك أوتوماتيكياً في ثوانٍ، وتصلك الشحنة لباب المنزل في مدة تتراوح بين 24 إلى 72 ساعة كحد أقصى.
+                </li>
+                <li class="policy-item">
+                    <strong>ضمان الاستبدال والاسترجاع:</strong>
+                    البراند يضمن لك حق الاستبدال أو الاسترجاع المجاني الشامل في حال وجود أي عيب مصنعي أو تلف خلال 14 يوماً من تاريخ الاستلام.
+                </li>
+            </ul>
+        </div>
+
+        <!-- كرت حماية وسرية البيانات -->
+        <div class="animated-card card-2">
+            <div class="section-title">🔒 أمان وسرية المعاملات</div>
+            <ul class="policy-list">
+                <li class="policy-item">
+                    <strong>تأمين الدفع كاش مقدم:</strong>
+                    في حال اختيار التحويل المسبق عبر فودافون كاش، السيستم المطور يضمن حماية طلبتك فور إرفاق إيصال التحويل (السكرين شوت).
+                </li>
+                <li class="policy-item">
+                    <strong>تشفير بيانات العملاء:</strong>
+                    جميع بيانات الشحن والأسماء وأرقام الهواتف المسجلة لدينا مشفرة ومحمية بالكامل خلف خوادم وجدران حماية جوجل العالمية.
+                </li>
+            </ul>
+        </div>
+
+        <!-- زراير التوجيه الذكية الخاصة بالواتساب بزنس -->
+        <div class="action-buttons-wrapper">
+            <!-- الزر الأول: ينقل العميل لصفحة العروض والطلب (حط لينك صفحة المنتج اللي عملناها هنا) -->
+            <a href="رابط_صفحة_المنتج_هنا.html" class="btn-store-action btn-primary-gold">
+                🛍️ تصفح المنتجات واطلب الآن
+            </a>
+            
+            <!-- الزر الثاني: يفتح شات مباشر مع رقم الواتساب بزنس بتاعك للدعم -->
+            <a href="https://wa.me/201064752844?text=أهلاً متجر الحمزاوي، دخلت من رابط بروفايل الواتساب وعندي استفسار." class="btn-store-action btn-whatsapp-dark" target="_blank">
+                <svg class="ws-btn-icon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                </svg>
+                تواصل مع الدعم الفني مباشر
+            </a>
+        </div>
+
+        <div class="store-footer">
+            جميع الحقوق محفوظة © 2026 لمتجر الحمزاوي أوتو ريبلاي البرمجية<br>
+            ✓ منصة آمنة مشفرة بالكامل | برعاية براند AL-HAMZAWI TECH
+        </div>
+    </div>
+
+<script>
+// 🔒 Al-Hamzawi Tech - Secured & Obfuscated Protection Script
+var _0x3b11=["\x5F\x64\x65\x66\x61\x75\x6C\x74","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x68\x72\x65\x66","\x69\x6E\x63\x6C\x75\x64\x65\x73","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x63\x6F\x6E\x74\x65\x78\x74\x6D\x65\x6E\x75","\x70\x72\x65\x76\x65\x6E\x74\x44\x65\x66\x61\x75\x6C\x74","\x6A\x61\x76\x61\x73\x63\x72\x69\x70\x74\x3A"];
+(function(){document[_0x3b11[4]](_0x3b11[5],function(_0x2x1){_0x2x1[_0x3b11[6]]()})})();
+</script>
+
+</body>
+</html>
