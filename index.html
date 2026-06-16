@@ -13,7 +13,6 @@
             --dark-bg: #121212; /* أسود مطفي فخم خلفية */
             --card-bg: #1e1e1e; /* أسود فاتح للكروت */
             --gold-color: #d4af37; /* ذهبي ملوكي للبراند */
-            --pink-accent: #e21b79; /* بينك متوهج للمسات التيك */
             --text-color: #f5f5f5;
         }
         @keyframes glow {
@@ -101,7 +100,7 @@
             font-weight: 800;
             margin-bottom: 18px;
             color: var(--gold-color);
-            border-right: 4px solid var(--pink-accent);
+            border-right: 4px solid var(--gold-color); /* تم تعديل اللون من بينك إلى ذهبي ملوكي */
             padding-right: 10px;
             display: flex;
             align-items: center;
@@ -122,12 +121,14 @@
             color: #ccc;
             font-weight: 600;
         }
+        /* تم استبدال النجم الرباعي بنقطة دائرية كبيرة ملوكي */
         .policy-item::before {
-            content: "✦";
+            content: "•";
             position: absolute;
             right: 0;
-            top: 0;
+            top: -2px;
             color: var(--gold-color);
+            font-size: 22px; 
             font-weight: 900;
         }
         .policy-item strong {
@@ -253,14 +254,14 @@
 
     <div class="container">
         
-        <!-- كرت هوية المتجر الملوكي الأصلي بحرف الـ H القديم وبدون صور -->
+        <!-- كرت هوية المتجر الملوكي الأصلي بحرف الـ H والبرق رجع مكانه -->
         <div class="brand-header">
             <div class="brand-logo-view">H</div>
             <h1 class="brand-title">AL-HAMZAWI STORE</h1>
-            <p class="brand-tagline">المنصة الرسمية المعتمدة للتجارة الإلكترونية والتسوق الآمن ●</p>
+            <p class="brand-tagline">المنصة الرسمية المعتمدة للتجارة الإلكترونية والتسوق الآمن ⚡</p>
         </div>
 
-        <!-- [الواجهة الأولى] كروت السياسة الأصلية مع تعديل وقت الشحن -->
+        <!-- [الواجهة الأولى] كروت السياسة الأصلية مع التعديلات الجديدة -->
         <div id="main-policy-view">
             <div class="animated-card card-1" style="opacity: 1;">
                 <div class="section-title">⚖️ سياسة وشروط المتجر الرسمية</div>
@@ -270,7 +271,7 @@
                         نعطيك كامل الحق القانوني في فتح الشحنة وفحص جودة المنتج بالكامل مع مندوب التوصيل قبل دفع أي مبالغ مالية.
                     </li>
                     <li class="policy-item">
-                        <strong>شحن فوري سريع صاعق:</strong>
+                        <strong>شحن فوري سريع:</strong>
                         تصلك الشحنة لباب المنزل في محافظات <b>القاهرة والجيزة</b> خلال <b>24 إلى 72 ساعة</b> كحد أقصى، وباقي المحافظات خلال <b>أسبوع</b>.
                     </li>
                     <li class="policy-item">
@@ -309,7 +310,7 @@
             </div>
         </div>
 
-        <!-- [الواجهة الثانية] واجهة المنتجات الجديدة بنفس الروح ومخفية أوتوماتيكياً -->
+        <!-- [الواجهة الثانية] واجهة المنتجات المجمعة ومخفية أوتوماتيكياً -->
         <div id="products-catalog-view" style="display: none;">
             <div class="animated-card card-1" style="opacity: 1; padding: 20px 15px;">
                 <div class="section-title">📦 معرض المنتجات الحصري</div>
@@ -322,7 +323,7 @@
                         <a href="https://bwtnalbarwn-png.github.io/dovo/?hl=en-GB" class="btn-go-product">تصفح المنتج الآن 🛒</a>
                     </div>
 
-                    <!-- مكان إضافة منتج جديد مستقبلاً من غير صور -->
+                    <!-- مكان إضافة منتج جديد مستقبلاً -->
                     <div class="product-card-item">
                         <h4>منتج جديد مضاف</h4>
                         <span class="price">السعر ج.م</span>
@@ -339,7 +340,7 @@
             </div>
         </div>
 
-        <!-- الفوتر المعدل باسم متجر الحمزاوي فقط -->
+        <!-- الفوتر باسم متجر الحمزاوي -->
         <div class="store-footer">
             جميع الحقوق محفوظة © 2026 لمتجر الحمزاوي<br>
             ✓ منصة آمنة مشفرة بالكامل | برعاية براند AL-HAMZAWI TECH
@@ -354,6 +355,7 @@ function showProductsView() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+// العودة للرئيسية
 function showPolicyView() {
     document.getElementById('products-catalog-view').style.display = 'none';
     document.getElementById('main-policy-view').style.display = 'block';
