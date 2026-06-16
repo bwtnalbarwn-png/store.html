@@ -3,255 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al-Hamzawi Store | الرئيسي</title>
+    <title>Al-Hamzawi Store</title>
     <style>
-        /* تنسيقات عامة للموقع */
-        * {
+        /* ستايل الموقع القديم والأصلي */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: #f9f9f9;
-            color: #333;
+            color: #333333;
         }
 
-        /* 1. الهيدر وتعديل اللوجو الجديد */
+        /* الهيدر القديم مع استبدال حرف H باللوجو الجديد */
         header {
-            background-color: #000;
-            padding: 15px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-        }
-        .logo-container {
-            display: flex;
-            align-items: center;
+            background-color: #111111;
+            padding: 20px;
+            text-align: center;
         }
         .logo-img {
-            height: 55px; /* مقاس مناسب للوجو الدهبي الجديد */
+            height: 60px; /* مقاس اللوجو الدهبي الجديد ليناسب الهيدر القديم */
             width: auto;
-            object-fit: contain;
+        }
+
+        /* نافيجيشن تحت اللوجو */
+        nav {
+            margin-top: 15px;
         }
         nav a {
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
-            margin-right: 20px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            color: #dfb76c; /* لون دهبي متناسق مع اللوجو */
+            margin: 0 15px;
+            font-size: 16px;
         }
 
-        /* البانر الرئيسي وزرار التصفح */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-bg.jpg') no-center/cover;
-            background-color: #1a1a1a;
-            height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            text-align: center;
-            padding: 0 20px;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-        .btn-browse {
-            background-color: #dfb76c;
-            color: #000;
-            padding: 12px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            transition: 0.3s;
-            margin-top: 20px;
-            display: inline-block;
-        }
-        .btn-browse:hover {
-            background-color: #fff;
-            transform: scale(1.05);
-        }
-
-        /* 2. قسم سياسة الشحن والتوصيل الجديدة */
-        .shipping-section {
-            background-color: #fff;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            border-right: 5px solid #dfb76c;
-        }
-        .shipping-section h3 {
-            margin-bottom: 15px;
-            color: #000;
-            font-size: 1.4rem;
-        }
-        .shipping-list {
-            list-style: none;
-        }
-        .shipping-list li {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        .shipping-list li::before {
-            content: "🚚";
-            margin-left: 10px;
-        }
-
-        /* 3. شبكة عرض كل المنتجات (تصفح المنتجات بستايل دوفو) */
-        .catalog-section {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-        .catalog-title {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2rem;
-            position: relative;
-        }
-        .catalog-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 3px;
-            background-color: #dfb76c;
-            margin: 10px auto 0;
-        }
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        .product-card {
-            background-color: #fff;
-            border: 1px solid #eee;
-            border-radius: 12px;
+        /* ستايل صفحة الهبوط القديمة لمنتج دوفو */
+        .main-content {
             padding: 20px;
             text-align: center;
-            transition: 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
         }
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-        .product-card img {
-            max-width: 100%;
-            height: 220px;
-            object-fit: contain;
-            margin-bottom: 15px;
-        }
-        .product-card h4 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: #222;
-        }
-        .product-card .price {
-            color: #b12704;
-            font-size: 1.3rem;
-            font-weight: bold;
-            display: block;
-            margin-bottom: 15px;
-        }
-        .btn-order {
-            background-color: #000;
-            color: #fff;
+
+        /* زرار التصفح القديم - تم ربطه بالقسم السفلي لمنع إيرور 404 */
+        .btn-browse-old {
+            background-color: #111111;
+            color: #ffffff;
             padding: 10px 20px;
             text-decoration: none;
-            border-radius: 6px;
             display: inline-block;
-            transition: 0.3s;
-            width: 100%;
-            font-weight: bold;
-        }
-        .btn-order:hover {
-            background-color: #dfb76c;
-            color: #000;
+            margin-top: 20px;
+            border: 1px solid #ffffff;
         }
 
-        /* الفوتر */
-        footer {
-            background-color: #000;
-            color: #aaa;
-            text-align: center;
-            padding: 20px;
+        /* قسم سياسة الشحن المعدل داخل التنسيق القديم */
+        .shipping-policy-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 30px auto;
+            max-width: 600px;
+            text-align: right;
+            background-color: #fafafa;
+        }
+        .shipping-policy-box h3 {
+            margin-top: 0;
+            color: #111;
+        }
+
+        /* ستايل شبكة المنتجات المجمعة تحت (الرئيسية والمنتجات تحت) */
+        .products-section-old {
+            border-top: 2px solid #111111;
             margin-top: 50px;
-            font-size: 0.9rem;
+            padding-top: 30px;
+            background-color: #ffffff;
+        }
+        .section-title {
+            font-size: 22px;
+            margin-bottom: 25px;
+            color: #111111;
+        }
+        .products-grid-old {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+        }
+        .product-item-old {
+            border: 1px solid #eeeeee;
+            width: 280px;
+            padding: 15px;
+            background: #ffffff;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.05);
+        }
+        .product-item-old img {
+            max-width: 100%;
+            height: auto;
+        }
+        .product-item-old h4 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .product-item-old .price {
+            color: #b12704;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .btn-link-old {
+            background-color: #111111;
+            color: #ffffff;
+            padding: 8px 15px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+        }
+
+        footer {
+            background-color: #111111;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
+    <!-- 1. الهيدر القديم باللوجو الجديد (69312.jpg) -->
     <header>
-        <div class="logo-container">
-            <a href="#home">
-                <img src="logo.jpg" alt="Al-Hamzawi" class="logo-img">
-            </a>
-        </div>
+        <a href="#home">
+            <img src="logo.jpg" alt="Al-Hamzawi Logo" class="logo-img">
+        </a>
         <nav>
             <a href="#home">الرئيسية</a>
-            <a href="#products">المنتجات</a>
-            <a href="#shipping">الشحن</a>
+            <a href="#all-products">المنتجات</a>
         </nav>
     </header>
 
-    <section class="hero" id="home">
-        <h1>مرحباً بكم في متجر الحمزاوي - Al-Hamzawi</h1>
-        <p>أفضل المنتجات بأعلى جودة وأسرع شحن</p>
-        <a href="#products" class="btn-browse">تصفح المنتجات الآن</a>
-    </section>
-
-    <section class="shipping-section" id="shipping">
-        <h3>سياسة الشحن والتوصيل الجديدة</h3>
-        <ul class="shipping-list">
-            <li><strong>محافظات القاهرة والجيزة:</strong> التوصيل سريع جداً خلال <strong>24 إلى 72 ساعة</strong> فقط.</li>
-            <li><strong>باقي محافظات الجمهورية:</strong> التوصيل يستغرق من 5 أيام إلى <strong>أسبوع</strong> كحد أقصى.</li>
-        </ul>
-    </section>
-
-    <section class="catalog-section" id="products">
-        <h2 class="catalog-title">معرض المنتجات</h2>
+    <!-- محتوى الصفحة الرئيسية القديم (مكان منتج دوفو الأساسي) -->
+    <div class="main-content" id="home">
+        <!-- هنا بيكون محتوى صفحة دوفو القديمة بالكامل (الصور، الوصف، زر الشراء القديم) -->
+        <h2>منتج دوفو الأصلي</h2>
+        <p>هنا يظهر وصف منتج دوفو وتفاصيله القديمة كما كانت تماماً...</p>
         
-        <div class="products-grid">
+        <!-- زرار التصفح القديم مصلح الآن وينزل بيك للمنتجات تحت لمنع الـ 404 -->
+        <a href="#all-products" class="btn-browse-old">تصفح المنتجات</a>
+    </div>
+
+    <!-- 2. سياسة الشحن الجديدة بالتصميم الكلاسيكي القديم -->
+    <div class="shipping-policy-box">
+        <h3>سياسة الشحن والتوصيل</h3>
+        <p>• <strong>محافظات القاهرة والجيزة:</strong> التوصيل خلال 24 إلى 72 ساعة.</p>
+        <p>• <strong>باقي المحافظات:</strong> التوصيل يستغرق أسبوع.</p>
+    </div>
+
+    <!-- 3. إضافة قسم "الرئيسية والمنتجات تحت" (معرض لكل المنتجات مجمع في الأسفل) -->
+    <div class="products-section-old" id="all-products">
+        <h3 class="section-title">كل المنتجات</h3>
+        <div class="products-grid-old">
             
-            <div class="product-card">
+            <!-- منتج دوفو داخل المعرض السفلي -->
+            <div class="product-item-old">
                 <img src="dovo.jpg" alt="منتج دوفو">
-                <h4>منتج دوفو الأصلي</h4>
-                <span class="price">150 ج.م</span>
-                <a href="https://bwtnalbarwn-png.github.io/dovo/?hl=en-GB" target="_blank" class="btn-order">عرض صفحة المنتج / طلب</a>
+                <h4>منتج دوفو</h4>
+                <span class="price">السعر ج.م</span>
+                <a href="https://bwtnalbarwn-png.github.io/dovo/?hl=en-GB" target="_blank" class="btn-link-old">عرض المنتج</a>
             </div>
 
-            <div class="product-card">
+            <!-- منتج جديد مضاف بنفس الستايل القديم -->
+            <div class="product-item-old">
                 <img src="product2.jpg" alt="منتج جديد">
-                <h4>اسم المنتج الجديد المضاف</h4>
-                <span class="price">200 ج.م</span>
-                <a href="#" class="btn-order">عرض صفحة المنتج / طلب</a>
-            </div>
-
-            <div class="product-card">
-                <img src="product3.jpg" alt="منتج آخر">
-                <h4>منتج مميز آخر</h4>
-                <span class="price">350 ج.م</span>
-                <a href="#" class="btn-order">عرض صفحة المنتج / طلب</a>
+                <h4>منتج جديد مضاف</h4>
+                <span class="price">السعر ج.م</span>
+                <a href="#" class="btn-link-old">عرض المنتج</a>
             </div>
 
         </div>
-    </section>
+    </div>
 
     <footer>
         <p>&copy; 2026 Al-Hamzawi Store. جميع الحقوق محفوظة.</p>
@@ -259,4 +186,3 @@
 
 </body>
 </html>
-
