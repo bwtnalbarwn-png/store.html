@@ -96,11 +96,11 @@
         .card-2 { animation-delay: 0.4s; }
 
         .section-title {
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 800;
             margin-bottom: 18px;
             color: var(--gold-color);
-            border-right: 4px solid var(--gold-color); /* تم تعديل اللون من بينك إلى ذهبي ملوكي */
+            border-right: 4px solid var(--gold-color);
             padding-right: 10px;
             display: flex;
             align-items: center;
@@ -121,7 +121,6 @@
             color: #ccc;
             font-weight: 600;
         }
-        /* تم استبدال النجم الرباعي بنقطة دائرية كبيرة ملوكي */
         .policy-item::before {
             content: "•";
             position: absolute;
@@ -138,7 +137,7 @@
             font-size: 14px;
         }
 
-        /* ستايل واجهة المنتجات الجديدة متناسق مع الاستايل الأصلي */
+        /* ستايل واجهة المنتجات المجمعة */
         .products-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -254,17 +253,16 @@
 
     <div class="container">
         
-        <!-- كرت هوية المتجر الملوكي الأصلي بحرف الـ H والبرق رجع مكانه -->
         <div class="brand-header">
             <div class="brand-logo-view">H</div>
             <h1 class="brand-title">AL-HAMZAWI STORE</h1>
             <p class="brand-tagline">المنصة الرسمية المعتمدة للتجارة الإلكترونية والتسوق الآمن ⚡</p>
         </div>
 
-        <!-- [الواجهة الأولى] كروت السياسة الأصلية مع التعديلات الجديدة -->
         <div id="main-policy-view">
+            
             <div class="animated-card card-1" style="opacity: 1;">
-                <div class="section-title">⚖️ سياسة وشروط المتجر الرسمية</div>
+                <div class="section-title">🛡️ سياسة الأمان وضمان المعاملات</div>
                 <ul class="policy-list">
                     <li class="policy-item">
                         <strong>المعاينة الكاملة قبل الدفع:</strong>
@@ -272,36 +270,63 @@
                     </li>
                     <li class="policy-item">
                         <strong>شحن فوري سريع:</strong>
-                        تصلك الشحنة لباب المنزل في <b>القاهرة والجيزة</b> خلال <b>24 إلى 72 ساعة</b> وباقي المحافظات من5 أيام إلي <b>أسبوع</b>.
+                        تصلك الشحنة لباب المنزل في القاهرة والجيزة خلال 24 إلى 72 ساعة وباقي المحافظات من 5 أيام إلي أسبوع.
                     </li>
                     <li class="policy-item">
                         <strong>ضمان الاستبدال والاسترجاع:</strong>
                         البراند يضمن لك حق الاستبدال أو الاسترجاع الشامل في حال وجود أي عيب مصنعي أو تلف خلال 3 أيام من تاريخ الاستلام.
                     </li>
-                </ul>
-            </div>
-
-            <div class="animated-card card-2" style="opacity: 1;">
-                <div class="section-title">🔒 أمان وسرية المعاملات</div>
-                <ul class="policy-list">
                     <li class="policy-item">
                         <strong>تأمين الدفع كاش مقدم:</strong>
                         في حال اختيار التحويل المسبق عبر فودافون كاش، السيستم المطور يضمن حماية طلبتك فور إرفاق إيصال التحويل (الاسكرين شوت).
                     </li>
                     <li class="policy-item">
-                        <strong>تشفير بيانات العملاء:</strong>
-                        جميع بيانات الشحن والأسماء وأرقام الهواتف المسجلة لدينا مشفرة ومحمية بالكامل.
+                        <strong>خصوصية بياناتك وحمايتها:</strong>
+                        جميع بيانات الشحن والعناوين الخاصة بك تُستخدم فقط لطباعة بوليصة التوصيل، وهي سرية تماماً ولا يتم مشاركتها مع أي جهة أخرى.
                     </li>
                 </ul>
             </div>
 
-            <!-- زرار التصفح والواتساب الأصليين تحت بعض ومتوجهين -->
+            <div class="animated-card card-2" style="opacity: 1;">
+                <div class="section-title">​📜 سياسة. التعامل وقواعد الاستلام</div>
+                <ul class="policy-list">
+                    <li class="policy-item">
+                        <strong>جدية الطلب والشحن:</strong>
+                        بمجرد تسجيلك للبيانات، السيستم بيخصم تكلفة الشحن فوراً لحساب مندوب منطقتك ويتم حجز المنتج؛ يرجى عدم تأكيد الطلب إلا في حالة الجاهزية التامة للاستلام، منعا للمساءلة عن تكاليف الشحن والهدر.
+                    </li>
+                    <li class="policy-item">
+                        <strong>الالتزام القانوني بالاستلام:</strong>
+                        تأكيدك للطلب يعتبر عقداً مبدئياً بجدية الشراء؛ في حال رفض الاستلام بعد خروج المندوب بدون سبب قهري، يتم إدراج الرقم في قائمة الحظر الموحدة لشركات الشحن، ويتحمل العميل الملاحقة بتعويض قيمة المشوار.
+                    </li>
+                    <li class="policy-item">
+                        <strong>تثبيت خط السير والأولوية:</strong>
+                        بعد الضغط على تأكيد، يتم تسجيل الأوردر برقم تسلسلي وربطه بخط سير المندوب فوراً ولا يمكن تعديل العنوان أو موعد الاستلام. في حالة عدم تواجدك، يرجى التنسيق مع شخص ينوب عنك للاستلام، حيث لا يتم إعادة جدولة الشحنة مرة أخرى ودفع الشحن مجدداً.
+                    </li>
+                    <li class="policy-item">
+                        <strong>قطعية الأسعار والمصاريف:</strong>
+                        جميع الأسعار وتكاليف الشحن الصادرة من السيستم نهائية ومبرمجة داخل بوليصة الشحن الرسمية للمندوب. مندوب التوصيل هو جهة تسليم وتحصيل فقط، ولا يملك أي صلاحية للنقاش في السعر أو الفصال أو تقديم خصومات، وفي حال الامتناع عن دفع المبلغ المثبت بالكامل يُلغى الأوردر ويتحمل العميل كلفة المشوار.
+                    </li>
+                    <li class="policy-item">
+                        <strong>سياسة العروض المجمعة والباقات:</strong>
+                        في حال الاستفادة من عروض العبوتين أو الـ 3 عبوات، يعتبر العرض وحدة واحدة لا تتجزأ. لا يُسمح نهائياً باسترجاع جزء من العرض والاحتفاظ بالجزء الآخر، وفي حالة الرغبة في الإرجاع يتم تسليم العرض كاملاً بنفس حالته الأصلية ودفع مصاريف الشحن للمندوب نظراً لتكلفة المشوار.
+                    </li>
+                    <li class="policy-item">
+                        <strong>حد أقصى للاحتفاظ بالشحنة:</strong>
+                        في حالة طلب العميل تأجيل الاستلام لأي سبب شخصي، يقوم السيستم بحجز الشحنة في مقر شركة الشحن لمدة أقصاها 48 ساعة فقط من تاريخ وصولها للمحافظة. بعد مرور هذه المدة، يتم إلغاء الأوردر أوتوماتيكياً وإرجاعه للمخازن مع فرض حظر مؤقت على الرقم من الطلب مجدداً.
+                    </li>
+                    <li class="policy-item">
+                        <strong>نظام الحظر الموحد (القائمة السوداء):</strong>
+                        متجرنا مرتبط بشبكة تجارية موحدة للكشف عن جدية المشترين. في حالة رفض استلام الشحنة بعد خروجها بدون سبب طبيعي صريح، يتم إدراج (الاسم، ورقم الهاتف، والعنوان) تلقائياً في القائمة السوداء المحظورة من الشحن أوتوماتيكياً في متجرنا وأكثر من 50 متجر إلكتروني اخر.
+                    </li>
+                </ul>
+            </div>
+
             <div class="action-buttons-wrapper" style="opacity: 1;">
                 <button onclick="showProductsView()" class="btn-store-action btn-primary-gold">
                     🛍️ تصفح المنتجات واطلب الآن
                 </button>
                 
-                <a href="https://wa.me/2012 07362722?text=أهلاً متجر الحمزاوي، دخلت من رابط بروفايل الواتساب وعندي استفسار." class="btn-store-action btn-whatsapp-dark" target="_blank">
+                <a href="https://wa.me/201207362722?text=أهلاً متجر الحمزاوي، دخلت من رابط بروفايل الواتساب وعندي استفسار." class="btn-store-action btn-whatsapp-dark" target="_blank">
                     <svg class="ws-btn-icon" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
                         <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
                     </svg>
@@ -310,20 +335,17 @@
             </div>
         </div>
 
-        <!-- [الواجهة الثانية] واجهة المنتجات المجمعة ومخفية أوتوماتيكياً -->
         <div id="products-catalog-view" style="display: none;">
             <div class="animated-card card-1" style="opacity: 1; padding: 20px 15px;">
                 <div class="section-title">📦 معرض المنتجات الحصري</div>
                 
                 <div class="products-grid">
-                    <!-- منتج دوفو وربطه باللينك المباشر -->
                     <div class="product-card-item">
                         <h4>منتج Dovo الأصلي</h4>
-                        <span class="price">السعر275 ج.م</span>
+                        <span class="price">السعر 275 ج.م</span>
                         <a href="https://bwtnalbarwn-png.github.io/dovo/?hl=en-GB" class="btn-go-product">تصفح المنتج الآن 🛒</a>
                     </div>
 
-                    <!-- مكان إضافة منتج جديد مستقبلاً -->
                     <div class="product-card-item">
                         <h4>منتج جديد مضاف</h4>
                         <span class="price">السعر ج.م</span>
@@ -332,7 +354,6 @@
                 </div>
             </div>
 
-            <!-- زرار العودة للرئيسية والسياسات تحت المنتجات -->
             <div class="action-buttons-wrapper" style="opacity: 1;">
                 <button onclick="showPolicyView()" class="btn-store-action" style="background: #222; color: #fff; border: 1px solid rgba(255,255,255,0.1);">
                     ⬅️ العودة للرئيسية والسياسات
@@ -340,31 +361,18 @@
             </div>
         </div>
 
-        <!-- الفوتر باسم متجر الحمزاوي -->
         <div class="store-footer">
             جميع الحقوق محفوظة © 2026 لمتجر الحمزاوي<br>
-            ✓ منصة آمنة مشفرة بالكامل | برعاية  AL-HAMZAWI TECH
+            ✓ منصة آمنة ومحمية بالكامل | برعاية AL-HAMZAWI TECH
         </div>
     </div>
 
 <script>
-// سكريبت التنقل السلس لمنع إيرور 404 نهائياً
-function showProductsView() {
-    document.getElementById('main-policy-view').style.display = 'none';
-    document.getElementById('products-catalog-view').style.display = 'block';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// العودة للرئيسية
-function showPolicyView() {
-    document.getElementById('products-catalog-view').style.display = 'none';
-    document.getElementById('main-policy-view').style.display = 'block';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// 🔒 سكريبت حماية المحتوى الأصلي الخاص بك
-var _0x3b11=["\x5F\x64\x65\x66\x61\x75\x6C\x74","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x68\x72\x65\x66","\x69\x6E\x63\x6C\x75\x64\x65\x73","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x63\x6F\x6E\x74\x65\x78\x74\x6D\x65\x6E\x75","\x70\x72\x65\x76\x65\x6E\x74\x44\x65\x66\x61\x75\x6C\x74","\x6A\x61\x76\x61\x73\x63\x72\x69\x70\x74\x3A"];
-(function(){document[_0x3b11[4]](_0x3b11[5],function(_0x2x1){_0x2x1[_0x3b11[6]]()})})();
+// 🔒 Al-Hamzawi Tech - Re-Obfuscated Security Script (Strict Edition)
+var _0x7f14=["\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x6D\x61\x69\x6E\x2D\x70\x6F\x6C\x69\x63\x79\x2D\x76\x69\x65\x77","\x73\x74\x79\x6C\x65","\x64\x69\x73\x70\x6C\x61\x79","\x6E\x6F\x6E\x65","\x70\x72\x6F\x64\x75\x63\x74\x73\x2D\x63\x61\x74\x61\x6C\x6F\x67\x2D\x76\x69\x65\x77","\x62\x6C\x6F\x63\x6B","\x73\x63\x72\x6F\x6C\x6C\x54\x6F","\x74\x6F\x70","\x62\x65\x68\x61\x76\x69\x6F\x72","\x73\x6D\x6F\x6F\x74\x68","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x63\x6F\x6E\x74\x65\x78\x74\x6D\x65\x6E\x75","\x70\x72\x65\x76\x65\x6E\x74\x44\x65\x66\x61\x75\x6C\x74"];
+function showProductsView(){document[_0x7f14[0]](_0x7f14[1])[_0x7f14[2]][_0x7f14[3]]=_0x7f14[4];document[_0x7f14[0]](_0x7f14[5])[_0x7f14[2]][_0x7f14[3]]=_0x7f14[6];window[_0x7f14[7]]({top:0,behavior:_0x7f14[10]})}
+function showPolicyView(){document[_0x7f14[0]](_0x7f14[5])[_0x7f14[2]][_0x7f14[3]]=_0x7f14[4];document[_0x7f14[0]](_0x7f14[1])[_0x7f14[2]][_0x7f14[3]]=_0x7f14[6];window[_0x7f14[7]]({top:0,behavior:_0x7f14[10]})}
+(function(){document[_0x7f14[11]](_0x7f14[12],function(_0x3x1){_0x3x1[_0x7f14[13]]()})})();
 </script>
 
 </body>
